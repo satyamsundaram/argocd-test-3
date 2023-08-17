@@ -1,8 +1,8 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: app-flock-notification-
-  # name: app-flock-notification
+  # generateName: app-flock-notification-
+  name: app-flock-notification
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
