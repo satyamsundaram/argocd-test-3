@@ -9,16 +9,16 @@ spec:
   template:
     spec:
       containers:
-      - name: flock-notification
-        image: curlimages/curl
-        command:
-          - "curl"
-          - "-X"
-          - "POST"
-          - "https://api.flock.com/hooks/sendMessage/72c286de-9ade-47cc-8317-d0988a4958d6"
-          - "-H"
-          - "\"Content-Type: application/json\""
-          - "-d"
-          - "'{\"text\": \"Post-sync message.\"}'"
+        - name: flock-notification
+          image: curlimages/curl
+          command:
+            - curl
+            - -X
+            - POST
+            - https://api.flock.com/hooks/sendMessage/72c286de-9ade-47cc-8317-d0988a4958d6
+            - -H
+            - '"Content-Type: application/json"'
+            - -d
+            - "'{\"text\": \"Post-sync message.\"}'"
       restartPolicy: onFailure
   backoffLimit: 2
